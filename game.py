@@ -1,16 +1,23 @@
 import random
 
+# def generateWordList():
+#     wordList = list()
+
+#     with open("words.csv", "r") as csv:
+#         for line in csv:
+#             currentline = line.split(",")
+#             for word in currentline:
+#                 if word != '\n':
+#                     wordList.append(word.lower())
+#     return wordList
+
 def generateWordList():
-    wordList = list()
-
-    with open("words.csv", "r") as csv:
-        for line in csv:
-            currentline = line.split(",")
-            for word in currentline:
-                if word != '\n':
-                    wordList.append(word.lower())
-    return wordList
-
+    with open('words.txt', 'r') as file:
+        lines = []
+        for line in file:
+            line = line.strip()
+            lines.append(line)
+    return lines
 def getNewWord(wordList): 
     return random.choice(wordList)
 
