@@ -26,4 +26,21 @@ words = generateWordList()
 
 print('Welcome to ', gameTitle)
 print('Your object is to figure out the 5 letter word.')
-print('You have ', maximumGuesses - currentGuess, ' guesses left.')
+
+while currentGuess < maximumGuesses :
+    print('You have ', maximumGuesses - currentGuess, ' attempt(s) left.')
+    userInput = input("What is your guess? ")
+    lcUserInput = userInput.lower()
+    if (not lcUserInput.isalpha()) or (len(lcUserInput) != 5):
+        print('Invalid input')
+    else:
+        print ('Game logic goes here')
+        currentGuess += 1
+
+
+
+
+
+
+
+   
